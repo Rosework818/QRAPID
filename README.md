@@ -4,6 +4,9 @@ This code is used for the color recognition application developed for "Smart DNA
 
 Below is a quick guide to using the UI of the program random_forest.py, organized by function and explained step-by-step in a concise manner.
 
+## Architecture:<br>
+<div align=center><img src="" width="740" height="437"/></div><br>
+
 ## Overall Interface
 Window Title: Pathogen Detection Color QR Code Analysis Software.
 
