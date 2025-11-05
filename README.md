@@ -39,13 +39,13 @@ Purpose: Analysis process for a single circular reaction zone (not a full image 
 ## Save Independent Analysis Results
 Purpose: Save the current analysis results as a CSV file (select the file location).
 
-## System Validation and Batch Processing
-Select Folder for System Validation
+## Select Folder for System Validation
 
 Purpose: Writes image paths from the folder into a "Independent Analysis Validation.csv" file in that folder (CSV header includes condition, image path, 5 true label columns, and 5 predict columns).
 
 Note: You need to manually fill in the true labels for each image in the CSV (Control/H1N1/Rhinovirus/Flu B/RSV columns use 0/1).
-## System Validation (Button)
+
+## System Validation 
 Purpose: Select a top-level folder containing validation images (folder names need to be parsable as temperature_distance_angle_device, e.g., "6500_30_0_phone1"). comprehensive_validation will:
 
 Read images from the folder, detect and analyze each image's five regions.
@@ -60,11 +60,12 @@ Note: If the folder name cannot be split into four segments (temperature_distanc
 
 Purpose: Select a folder containing images. The program will perform independent analysis on all images in the directory and save the results as a CSV file ("Independent Analysis Results.csv").
 
-Batch Process Single Circle Images and Save Results
+## Batch Process Single Circle Images and Save Results
 
 Purpose: Run single circle prediction on each circular image in the directory and save the results as a CSV file ("Single Circle Image Independent Analysis Results.csv").
 
 ## Result Display and Interpretation
+
 Independent Analysis Results Table Columns: Region name, result, positive probability (yellow), negative probability (blue), decision logic.
 
 Color Indicators (UI):
