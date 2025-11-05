@@ -5,7 +5,7 @@ This code is used for the color recognition application developed for "Smart DNA
 Below is a quick guide to using the UI of the program random_forest.py, organized by function and explained step-by-step in a concise manner.
 
 ## Architecture:<br>
-<div align=center><img src="" width="740" height="437"/></div><br>
+<div align=center><img src="https://github.com/Rosework818/QRAPID/blob/main/lab%E5%88%86%E5%B8%83.png" width="740" height="740"/></div><br>
 
 ## Overall Interface
 Window Title: Pathogen Detection Color QR Code Analysis Software.
