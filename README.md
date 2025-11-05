@@ -31,6 +31,7 @@ Results: The analysis results are displayed in the "Image Display" tab under "In
 Select Single Circle Image / Output Single Circle Image and Table Results
 
 Purpose: Analysis process for a single circular reaction zone (not a full image with a QR code). After selecting the image, click "Output" to display the processed image and prediction (Yellow/Blue) with probability.
+
 # Save Independent Analysis Results
 Purpose: Save the current analysis results as a CSV file (select the file location).
 
@@ -48,25 +49,45 @@ Read images from the folder, detect and analyze each image's five regions.
 Write results back into the "Independent Analysis Validation.csv" (filling the predict columns).
 
 Calculate TP/FP/FN/TN, success rate, Precision, Recall, F1, and display results in the "Performance Analysis" tab with a pop-up notification of the processed quantity.
+
 Note: If the folder name cannot be split into four segments (temperature_distance_angle_device), an error will occur and the program will exit.
-Batch Process Independent Analysis Images and Save Results
+
+# Batch Process Independent Analysis Images and Save Results
+
 Purpose: Select a folder containing images. The program will perform independent analysis on all images in the directory and save the results as a CSV file ("Independent Analysis Results.csv").
+
 Batch Process Single Circle Images and Save Results
+
 Purpose: Run single circle prediction on each circular image in the directory and save the results as a CSV file ("Single Circle Image Independent Analysis Results.csv").
+
 # Result Display and Interpretation
 Independent Analysis Results Table Columns: Region name, result, positive probability (yellow), negative probability (blue), decision logic.
+
 Color Indicators (UI):
+
 Positive (Yellow): Yellow background (#fff200)
+
 Negative (Blue): Blue background (#0015ff)
+
 Invalid (Invalid/Control Failure): Red background
+
 Performance Analysis Page: Displays textual performance/log information (training/validation/single sample analysis output, etc.).
+
 File Output Location: Training/validation-related files are saved in the current working directory or a user-selected directory (e.g., model file random_forest_model.pkl, confusion_matrix.png, roc_curve.png, various CSV files, etc.).
 File/CVS Points
+
 image_path_to_csv writes "Independent Analysis Validation.csv" in the selected folder, initially only writing condition and image path. True labels need to be manually or externally filled (Control/H1N1/Rhinovirus/Flu B/RSV columns use 0/1).
+
 comprehensive_validation reads the CSV and matches using the image path column to write predict values back into the corresponding "{Region} predict" columns.
+
 If using confusion matrix visualization (commented code), the confusion matrix image will be saved to the image path (the commented part no longer displays automatically).
+
 Common Issues and Suggestions
+
 Training data must include "yellow" or "blue" identifiers, and there must be enough samples; otherwise, training or metric calculation will fail.
+
 For system validation, the image path in the CSV must match the validation_results exactly (file name or relative path); otherwise, it will be skipped with a warning.
+
 If the GUI is unresponsive or the progress bar does not update, ensure not to close the program during batch operations; the progress bar will attempt to call update_idletasks.
+
 For debugging, observe console output (it will print detailed error/warning information).
